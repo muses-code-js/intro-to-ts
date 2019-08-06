@@ -1,3 +1,5 @@
+// tslint:disable
+
 /**
  * Exercise 1: annotate data types such as string, date, number and array
  */

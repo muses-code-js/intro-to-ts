@@ -1,3 +1,5 @@
+// tslint:disable
+
 /**
  * Exercise 2: set types of the function arguments
  */
@@ -27,21 +29,21 @@ const getDate = (date) => date.toLocaleDateString();
 
 // Example from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 const createPet = function (name) {
-    var sex;
+    var gender;
 
     return {
         setName: (newName) => name = newName,
 
         getName: () => name,
 
-        getSex: function () {
-            return sex;
+        getGender: function () {
+            return gender;
         },
 
-        setSex: (newSex) => {
-            if (typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-                newSex.toLowerCase() === 'female')) {
-                sex = newSex;
+        setGender: (newGender) => {
+            if (typeof newGender === 'string' && (newGender.toLowerCase() === 'male' ||
+                newGender.toLowerCase() === 'female')) {
+                gender = newGender;
             }
         }
     }
@@ -51,6 +53,6 @@ const createPet = function (name) {
 // pet.getName(); // Vivie
 
 // pet.setName('Oliver');
-// pet.setSex('male');
-// pet.getSex(); // male
+// pet.setGender('male');
+// pet.getGender(); // male
 // pet.getName(); // Oliver

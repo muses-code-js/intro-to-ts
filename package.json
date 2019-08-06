@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc --p ./",
+    "lint": "tslint *.ts",
+    "enable-ts": "tsc --init",
+    "enable-tslint": "tslint --init"
   },
   "author": "Leo Caseiro <leo@leocaseiro.com>",
-  "license": "ISC",
   "devDependencies": {
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   }
 }

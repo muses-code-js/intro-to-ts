@@ -1,3 +1,5 @@
+// tslint:disable
+
 /**
  * Exercise 3.a: set types of the classes and methods
  */
@@ -12,7 +14,7 @@ class Calculator {
 }
 
 
-
+declare type IAddress = any;
 /**
  * Exercise 3.b: Add types and create interfaces for Person and Employee
  */
@@ -29,13 +31,9 @@ abstract class Person {
         return `${this._firstName} ${this._lastName}`;
     };
 
-    set name({ firstName, lastName }) {
+    constructor(firstName, lastName, age, gender, address) {
         this._firstName = firstName;
         this._lastName = lastName;
-    }
-
-    constructor(firstName, lastName, age, gender, address) {
-        this.name = { firstName, lastName };
         this.age = age;
         this.gender = gender;
         this.address = address;
