@@ -6,12 +6,10 @@
   "scripts": {
     "start": "tsc --p ./",
     "lint": "tslint *.ts",
-    "enable-ts": "tsc --init",
-    "enable-tslint": "tslint --init"
+    "enable-ts": "tsc --init"
   },
   "author": "Leo Caseiro <leo@leocaseiro.com>",
   "devDependencies": {
-    "tslint": "^5.18.0",
     "typescript": "^3.5.3"
   },
   "dependencies": {
