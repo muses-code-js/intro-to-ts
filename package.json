@@ -5,14 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc --p ./",
-    "lint": "tslint *.ts",
     "enable-ts": "tsc --init"
   },
   "author": "Leo Caseiro <leo@leocaseiro.com>",
   "devDependencies": {
     "typescript": "^3.5.3"
-  },
-  "dependencies": {
-    "bootstrap": "^4.3.1"
   }
 }
