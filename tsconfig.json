@@ -62,7 +62,6 @@
   },
   "exclude": [
     "node_modules",
-    "app",
-    "my-app"
+    "app"
   ]
 }

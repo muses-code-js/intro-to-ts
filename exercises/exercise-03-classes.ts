@@ -2,34 +2,40 @@
  * Exercise 3.a: set types of the classes and methods
  */
 class Calculator {
-    add = (n1, n2) => n1 + n2;
+    add = (n1: number, n2: number): number => n1 + n2;
 
-    subtract = (n1, n2) => n1 + n2;
+    subtract = (n1: number, n2: number): number => n1 + n2;
 
-    multiply = (n1, n2) => n1 * n2;
+    multiply = (n1: number, n2: number): number => n1 * n2;
 
-    divide = (n1, n2) => n1 / n2;
+    divide = (n1: number, n2: number): number => n1 / n2;
 }
 
+interface Address {
+    street: string;
+    suburb: string;
+    postcode: number;
+    state: string;
+    country: string;
+}
 
-declare type IAddress = any;
 /**
  * Exercise 3.b: Add types and create interfaces for Person and Employee
  */
 abstract class Person {
-    private _firstName; // should be readonly
-    private _lastName; // should be readonly
+    private readonly _firstName: string; // should be readonly
+    private readonly _lastName: string; // should be readonly
 
-    protected age;
-    protected gender; // should be readonly
+    protected age: number;
+    protected readonly gender: string; // should be readonly
 
-    public address;
+    public address: string;
 
-    get name() {
+    get name(): string {
         return `${this._firstName} ${this._lastName}`;
     };
 
-    constructor(firstName, lastName, age, gender, address) {
+    constructor(firstName: string, lastName: string, age: number, gender: string, address: IAddress) {
         this._firstName = firstName;
         this._lastName = lastName;
         this.age = age;
@@ -45,18 +51,26 @@ abstract class Person {
 class Employee extends Person {
     profession;
 
-    constructor(firstName, lastName, age, gender, profession, address) {
+    constructor(firstName: string, lastName: string, age: number, gender: string, address: IAddress) {
         super(firstName, lastName, age, gender, address);
 
         this.profession = profession;
     }
 
-    getName() {
+    getName(): string {
         return `Hello, my name is ${this.name}`;
     }
 
-    getProfession() {
+    getProfession(): string {
         return `Hello, my profession is ${this.profession}`;
+    }
+
+    getAddress(): IAddress {
+        return this.address;
+    }
+
+    getAge(): string {
+        return `Hello, my age is ${this.age}`;
     }
 }
 
