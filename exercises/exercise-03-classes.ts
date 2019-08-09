@@ -1,5 +1,3 @@
-// tslint:disable
-
 /**
  * Exercise 3.a: set types of the classes and methods
  */

@@ -1,5 +1,3 @@
-// tslint:disable
-
 /**
  * Exercise 2: set types of the function arguments
  */
@@ -29,7 +27,7 @@ const getDate = (date) => date.toLocaleDateString();
 
 // Example from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 const createPet = function (name) {
-    var gender;
+    let gender;
 
     return {
         setName: (newName) => name = newName,

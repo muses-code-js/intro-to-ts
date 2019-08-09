@@ -1,25 +1,29 @@
-// tslint:disable
-
 /**
  * Exercise 1: annotate data types such as string, date, number and array
  */
 
-const genders = { M: 'male', F: 'female' };
-
-let firstName = "John";
-let lastName = "Doe";
-let age = 18;
-let gender = genders.M;
-let birthday = new Date(1991, 11, 25);
-let yearsOfExperience = "5";
-let profession = 'Web Developer'
-let languages = ['JavaScript', 'NodeJS', 'TypeScript'];
-let frameworks = Array("React", "Vue", "Angular");
-let address = {
+const firstName = "John";
+const lastName = "Doe";
+const age = 18;
+const gender = 'male';
+const birthday = new Date(1991, 11, 25);
+const yearsOfExperience = "5";
+const profession = 'Web Developer'
+const languages = ['JavaScript', 'NodeJS', 'TypeScript'];
+const frameworks = Array("React", "Vue", "Angular");
+const address: Address = {
     street: "123 George St",
     suburb: 'Sydney',
     "postcode": 2000,
     state: "NSW",
     country: 'Australia'
 }
-let isEmployee = true
+const isEmployee = true
+
+interface Address {
+    street: string;
+    suburb: string;
+    postcode: number;
+    state: string;
+    country: string;
+}
