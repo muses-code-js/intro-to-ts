@@ -54,3 +54,7 @@ const createPet = function (name) {
 // pet.setGender('male');
 // pet.getGender(); // male
 // pet.getName(); // Oliver
+
+interface User {
+    name: string;
+}
