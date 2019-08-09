@@ -63,6 +63,6 @@
   "exclude": [
     "node_modules",
     "app",
-    "my-app"
+    "exercises/exercise-03-classes.ts"
   ]
 }
